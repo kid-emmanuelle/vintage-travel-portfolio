@@ -1,9 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kid - Emmanuelle Portfolio
 
-## Getting Started
+A vintage travel journal-inspired portfolio website
 
-First, run the development server:
+## 🎯 About This Project
 
+This portfolio website presents professional journey through a unique vintage travel journal aesthetic, complete with passport-style layouts, travel stamps, and typewriter fonts. The site serves as both a professional showcase and a creative expression of her personality and interests.
+
+## ✨ Features
+
+- **Vintage Travel Journal Design**: Passport-style layouts with travel stamps and vintage typography
+- **Responsive Design**: Optimized for all devices with a mobile-first approach
+- **Portfolio Sections**:
+  - 🏠 **Home**: Hero section with passport-style profile
+  - 👤 **About**: Personal background and journey
+  - 🚀 **Projects**: Technical projects and achievements
+  - 📝 **Blog**: Technical articles and insights
+  - 📸 **Gallery**: Personal photography and creative work
+  - 📧 **Contact**: Get in touch form with EmailJS integration
+- **Interactive Elements**: 
+  - QR codes and barcodes for tech aesthetic
+  - Framer Motion animations
+  - Travel stamp decorations
+- **MDX Support**: Blog posts written in MDX with syntax highlighting
+- **SEO Optimized**: Comprehensive meta tags and Open Graph support
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework**: Next.js 15.3.3 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS with custom vintage theme
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+
+### Content & Data
+- **Blog**: MDX with `@next/mdx` and `next-mdx-remote`
+- **Markdown**: Gray Matter for frontmatter parsing
+- **Syntax Highlighting**: Remark Prism
+
+### Additional Features
+- **Email**: EmailJS for contact form
+- **QR Codes**: qrcode.react for generating QR codes
+- **Barcodes**: JSBarcode for barcode generation
+- **Theme**: next-themes for dark/light mode
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/kid-emmanuelle/vintage-portfolio.git
+cd vintage-portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +78,73 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+vintage-portfolio/
+├── app/                    # Next.js App Router
+│   ├── about/             # About page
+│   ├── blog/              # Blog section
+│   ├── components/        # Reusable React components
+│   │   ├── Barcode.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── Navigation.tsx
+│   │   ├── QRCode.tsx
+│   │   └── SpecCard.tsx
+│   ├── contact/           # Contact form page
+│   ├── gallery/           # Photo gallery
+│   ├── projects/          # Projects showcase
+│   ├── globals.css        # Global styles & Tailwind
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── public/                # Static assets
+│   ├── cv/               # Resume/CV files
+│   └── images/           # Images and photos
+```
 
-## Learn More
+## 🎨 Design System
 
-To learn more about Next.js, take a look at the following resources:
+The portfolio uses a custom vintage travel journal theme with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Color Palette**: Vintage burgundy, forest green, brass, and aged paper tones
+- **Typography**: 
+  - Serif fonts for headers
+  - Script fonts for signatures
+  - Typewriter fonts for technical content
+- **Components**: Passport-style cards, travel stamps, vintage borders
+- **Interactive Elements**: Hover effects, smooth animations, theme transitions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+The portfolio is optimized for deployment on Vercel:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For other platforms, ensure Node.js 18+ support and proper environment variable configuration.
+
+## 🔧 Customization
+
+### Themes
+Modify the Tailwind configuration in `tailwind.config.ts` to customize the vintage color palette and typography.
+
+### Content
+- Update personal information in `app/components/HeroSection.tsx`
+- Modify navigation in `app/components/Navigation.tsx`
+- Customize metadata in `app/layout.tsx`
+
+## 📄 License
+MIT License
+
+## 📧 Contact
+- 📧 Email: kid.nguyenlenganha@gmail.com
+- 💼 LinkedIn: [linkedin.com/in/kid-emmanuelle](https://linkedin.com/in/kid-emmanuelle)
+- 💻 GitHub: [@kid-emmanuelle](https://github.com/kid-emmanuelle)
+
+---
+
+*Crafted with passion • Designed like a vintage travel journal* ✈️

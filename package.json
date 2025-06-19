@@ -9,16 +9,34 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.3.3",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/qrcode.react": "^1.0.5",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^12.18.1",
+    "gray-matter": "^4.0.3",
+    "jsbarcode": "^3.12.1",
+    "lucide-react": "^0.515.0",
+    "marked": "^15.0.12",
+    "next": "15.3.3",
+    "next-mdx-remote": "^5.0.0",
+    "next-themes": "^0.4.6",
+    "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "remark-gfm": "^4.0.1",
+    "remark-prism": "^1.3.6",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
   }
 }

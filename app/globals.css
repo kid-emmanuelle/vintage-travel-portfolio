@@ -1,26 +1,206 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    @apply bg-paper-light font-vintage text-ink-black;
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(44, 24, 16, 0.05) 1px, transparent 0);
+    background-size: 20px 20px;
+    min-height: 100vh;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Custom scrollbar for vintage feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-paper-cream;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-vintage-brass rounded-vintage;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-vintage-copper;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Vintage Paper Card */
+  .vintage-card {
+    @apply border-2 border-ink-faded shadow-paper relative;
+    background-image: 
+      linear-gradient(45deg, transparent 24%, rgba(68, 68, 68, 0.03) 25%, rgba(68, 68, 68, 0.03) 26%, transparent 27%, transparent 74%, rgba(68, 68, 68, 0.03) 75%, rgba(68, 68, 68, 0.03) 76%, transparent 77%),
+      linear-gradient(-45deg, transparent 24%, rgba(68, 68, 68, 0.03) 25%, rgba(68, 68, 68, 0.03) 26%, transparent 27%, transparent 74%, rgba(68, 68, 68, 0.03) 75%, rgba(68, 68, 68, 0.03) 76%, transparent 77%);
+    background-size: 30px 30px;
+  }
+
+  .vintage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(231, 218, 201, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(231, 218, 201, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Travel Stamp */
+  .travel-stamp {
+    @apply relative bg-travel-stamp text-white p-2 rounded-stamp shadow-stamp transform -rotate-2;
+    border: 2px dashed rgba(255, 255, 255, 0.8);
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.1) 2px,
+        rgba(255, 255, 255, 0.1) 4px
+      );
+  }
+
+  .travel-stamp::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: 
+      radial-gradient(circle at 4px 4px, transparent 2px, currentColor 2px, currentColor 4px, transparent 4px),
+      radial-gradient(circle at 12px 12px, transparent 2px, currentColor 2px, currentColor 4px, transparent 4px);
+    background-size: 8px 8px;
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  /* Passport Page */
+  .passport-page {
+    @apply bg-paper-light border-l-4 border-travel-passport shadow-travel-card relative p-6;
+    background-image: 
+      linear-gradient(90deg, rgba(37, 99, 235, 0.05) 0%, transparent 10%),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 24px,
+        rgba(107, 114, 128, 0.1) 24px,
+        rgba(107, 114, 128, 0.1) 25px
+      );
+  }
+
+  /* Vintage Button */
+  .vintage-btn {
+    @apply font-serif font-bold px-6 py-3 bg-vintage-gold text-ink-black 
+           border-2 border-vintage-brass shadow-vintage rounded-vintage
+           hover:bg-vintage-brass hover:text-white transition-all duration-300
+           transform hover:scale-105 relative overflow-hidden;
+  }
+
+  .vintage-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .vintage-btn:hover::before {
+    left: 100%;
+  }
+
+  /* Typewriter Effect */
+  .typewriter {
+    @apply font-typewriter relative;
+    border-right: 2px solid;
+    animation: typewriter 1s steps(40) infinite;
+  }
+
+  /* Vintage Border */
+  .vintage-border {
+    @apply border-4 border-double border-vintage-brass relative;
+    background-clip: padding-box;
+  }
+
+  .vintage-border::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    background: linear-gradient(45deg, #D4AF37, #B5651D, #D4AF37);
+    z-index: -1;
+    border-radius: inherit;
+  }
+
+  /* Travel Document Header */
+  .document-header {
+    @apply bg-gradient-to-r from-vintage-navy to-travel-passport text-white p-4 relative overflow-hidden;
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.1) 10px,
+        rgba(255, 255, 255, 0.1) 20px
+      );
+  }
+
+  .document-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 3px,
+      currentColor 3px,
+      currentColor 6px
+    );
+    opacity: 0.2;
+  }
+
+  /* Aged Paper Effect */
+  .aged-paper {
+    @apply bg-paper-aged relative;
+    box-shadow: 
+      inset 0 0 20px rgba(222, 184, 135, 0.3),
+      0 2px 10px rgba(44, 24, 16, 0.1);
+  }
+
+  .aged-paper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 20%),
+      radial-gradient(circle at 80% 80%, rgba(139, 69, 19, 0.1) 0%, transparent 20%),
+      radial-gradient(circle at 40% 40%, rgba(139, 69, 19, 0.05) 0%, transparent 30%);
+    pointer-events: none;
+  }
 }
