@@ -2,6 +2,8 @@
 
 A vintage travel journal-inspired portfolio website
 
+![image](https://github.com/user-attachments/assets/50e0d23d-f9b0-4a4b-87f4-0fd7540c1be8)
+
 ## 🎯 About This Project
 
 This portfolio website presents professional journey through a unique vintage travel journal aesthetic, complete with passport-style layouts, travel stamps, and typewriter fonts. The site serves as both a professional showcase and a creative expression of her personality and interests.
