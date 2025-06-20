@@ -56,8 +56,8 @@ This portfolio website presents professional journey through a unique vintage tr
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/kid-emmanuelle/vintage-portfolio.git
-cd vintage-portfolio
+git clone https://github.com/kid-emmanuelle/vintage-travel-portfolio.git
+cd vintage-travel-portfolio
 ```
 
 2. Install dependencies:
@@ -85,7 +85,7 @@ bun dev
 ## 📁 Project Structure
 
 ```
-vintage-portfolio/
+vintage-travel-portfolio/
 ├── app/                    # Next.js App Router
 │   ├── about/             # About page
 │   ├── blog/              # Blog section
