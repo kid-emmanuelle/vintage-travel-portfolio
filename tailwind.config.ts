@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'serif': ['Playfair Display', 'Georgia', 'serif'],
-        'vintage': ['Crimson Text', 'Georgia', 'serif'],
-        'typewriter': ['Courier Prime', 'Courier New', 'monospace'],
-        'script': ['Dancing Script', 'cursive'],
+        'serif': ['Georgia', 'serif'],
+        'vintage': ['Georgia', 'serif'],
+        'typewriter': ['Courier New', 'monospace'],
+        'script': ['cursive'],
       },
       colors: {
         // Vintage paper and travel colors

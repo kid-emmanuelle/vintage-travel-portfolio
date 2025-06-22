@@ -58,7 +58,7 @@ const Navigation = () => {
   return (
     <>
       {/* Main Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 document-header">
+      <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-white border-b border-white/20 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             
@@ -91,7 +91,7 @@ const Navigation = () => {
                 >
                   <div className="flex items-center space-x-2">
                     <item.icon className="w-4 h-4" />
-                    <span className="font-typewriter text-sm font-semibold tracking-wide">
+                    <span className="font-typewriter text-md font-extrabold tracking-wide">
                       {item.label}
                     </span>
                   </div>
@@ -122,8 +122,8 @@ const Navigation = () => {
                 </div>
               </div>
 
-              {/* Theme Toggle */}
-              {mounted && (
+              {/* Theme Toggle (disabled for now) */}
+              {/* {mounted && (
                 <button
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                   className="p-2 rounded-vintage bg-vintage-gold/10 hover:bg-vintage-gold/20 text-vintage-gold transition-colors duration-200"
@@ -135,7 +135,7 @@ const Navigation = () => {
                     <Moon className="w-4 h-4" />
                   )}
                 </button>
-              )}
+              )} */}
 
               {/* Mobile Menu Button */}
               <button
